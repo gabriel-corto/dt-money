@@ -14,26 +14,25 @@ export const HeaderContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+`
+export const NewTransactionButton = styled.button`
+  height: 50px;
+  border: 0;
+  background: ${(props) => props.theme['green-500']};
+  color: ${(props) => props.theme.white};
+  font-weight: bold;
+  padding: 0 1.25rem;
+  border-radius: 6px;
+  margin-top: 1.25rem;
+  cursor: pointer;
 
-  button[type='submit'] {
-    height: 50px;
-    border: 0;
-    background: ${(props) => props.theme['green-500']};
-    color: ${(props) => props.theme.white};
-    font-weight: bold;
-    padding: 0 1.25rem;
-    border-radius: 6px;
-    margin-top: 1.25rem;
-    cursor: pointer;
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 
-    &:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-
-    &:not(:disabled):hover {
-      background: ${(props) => props.theme['green-700']};
-      transition: background-color 0.2s;
-    }
+  &:not(:disabled):hover {
+    background: ${(props) => props.theme['green-700']};
+    transition: background-color 0.2s;
   }
 `
