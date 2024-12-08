@@ -5,6 +5,7 @@ import { SearchForm } from "./components/SearchForm";
 import { PriceHightLight, TransactionsContainer, TransactionsTable } from "./style";
 import { TransactionsContext } from "../../contexts/TransactionsContext";
 import { formatteData, priceFormatter } from "../../utils/formatter";
+import { Spineer } from "../../components/Spineer";
 
 export function Transactions() {
 
@@ -36,6 +37,7 @@ export function Transactions() {
               )
             })}
           </tbody>
+          {transactions.length === 0 && <Spineer /> }
         </TransactionsTable>
       </TransactionsContainer>
     </div>

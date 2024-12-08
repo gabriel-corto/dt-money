@@ -10,7 +10,7 @@ interface TransactionsType {
 }
 
 interface TransactionsContextProps {
-  transactions: TransactionsType[]
+  transactions: TransactionsType[] 
 }
 
 interface TransactionsContextProviderProps {
