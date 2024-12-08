@@ -2,6 +2,10 @@
 
 Financial control application developed in module 03: API consumption and performance in ReactJS
 
+# Layout 
+
+<img src="./public/demo.png">
+
 # 🛠️ Tecnologies
 <li>Vite + React.js</li>
 <li>Typescript</li>
@@ -27,3 +31,7 @@ Execute the project
 > npm run dev
 
 # 📚 Functional requirements
+- Create Transactions 
+- Views created Transactions 
+- Filter created transactions 
+- Views Summary Transactions 
