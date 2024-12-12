@@ -35,3 +35,4 @@ Execute the project
 - Views created Transactions 
 - Filter created transactions 
 - Views Summary Transactions 
+- Optmization of the components 
