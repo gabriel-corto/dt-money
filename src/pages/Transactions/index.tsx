@@ -1,14 +1,20 @@
-import { Header } from "../../components/Header";
-import { Summary } from "../../components/Summary";
-import { SearchForm } from "./components/SearchForm";
-import { PriceHightLight, TransactionsContainer, TransactionsTable } from "./style";
-import { TransactionsContext } from "../../contexts/TransactionsContext";
-import { formatteData, priceFormatter } from "../../utils/formatter";
-import { useContextSelector } from "use-context-selector";
+import { Header } from "../../components/Header"
+import { Summary } from "../../components/Summary"
+import { SearchForm } from "./components/SearchForm"
+import {
+  PriceHightLight,
+  TransactionsContainer,
+  TransactionsTable,
+} from "./style"
+import { TransactionsContext } from "../../contexts/TransactionsContext"
+import { formatteData, priceFormatter } from "../../utils/formatter"
+import { useContextSelector } from "use-context-selector"
 
 export function Transactions() {
-
-  const transactions = useContextSelector(TransactionsContext, (context) => context.transactions)
+  const transactions = useContextSelector(
+    TransactionsContext,
+    (context) => context.transactions
+  )
 
   return (
     <div>
@@ -20,10 +26,10 @@ export function Transactions() {
 
         <TransactionsTable>
           <tbody>
-            {transactions.map(transaction => {
+            {transactions?.map((transaction) => {
               return (
                 <tr key={transaction.id}>
-                  <td width="50%">{transaction.description}</td>
+                  <td width='50%'>{transaction.description}</td>
                   <td>
                     <PriceHightLight variant={transaction.type}>
                       {transaction.type === "outcome" && "- "}
@@ -31,7 +37,9 @@ export function Transactions() {
                     </PriceHightLight>
                   </td>
                   <td>{transaction.category}</td>
-                  <td>{formatteData.format(new Date(transaction.createdAt))}</td>
+                  <td>
+                    {formatteData.format(new Date(transaction.createdAt))}
+                  </td>
                 </tr>
               )
             })}

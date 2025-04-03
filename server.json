@@ -1,0 +1,20 @@
+{
+  "transactions": [
+    {
+      "description": "Formação Mirantes Technologies ",
+      "price": 19500,
+      "category": "Educação",
+      "type": "outcome",
+      "createdAt": "2025-04-03T23:03:09.784Z",
+      "id": 1
+    },
+    {
+      "description": "Desenvolvimento de Software ",
+      "price": 30000,
+      "category": "Trabalho ",
+      "type": "income",
+      "createdAt": "2025-04-03T23:08:33.333Z",
+      "id": 2
+    }
+  ]
+}
