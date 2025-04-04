@@ -33,6 +33,7 @@ export function Transactions() {
                   <td>
                     <PriceHightLight variant={transaction.type}>
                       {transaction.type === "outcome" && "- "}
+                      {transaction.type === "income" && "+ "}
                       {priceFormatter.format(transaction.price)}
                     </PriceHightLight>
                   </td>
